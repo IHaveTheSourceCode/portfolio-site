@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;900&display=swap");
+* {
+  margin: 0;
+}
+
+:root {
+  --clr-background-light: #202226;
+  --clr-background-dark: #1d1e21;
+  --clr-text-main: #ffffff;
+  --clr-text-sub: #9ea2ae;
+  --clr-object-fill: #285ce1;
+
+  --font-main: "Albert Sans", sans-serif;
+  --font-empathized: "Clash Display", sans-serif;
+}
+
+body {
+  color: var(--clr-text-main);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+
+header {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--clr-background-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+header > nav {
+  align-self: flex-end;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  height: 40vh;
+}
+
+header > nav > :nth-child(n) {
+  margin-left: 1.2rem;
+  display: inline-block;
+  transition: transform 0.2s ease-in;
+  text-decoration: none;
+  opacity: 0;
+  color: var(--clr-text-main);
+  transition: all 0.2s;
+}
+
+header > nav > :nth-child(n):hover {
+  cursor: pointer;
+  color: var(--clr-object-fill);
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+header > nav > :nth-child(1) {
+  animation: showNavigation 0.6s linear forwards 1.2s;
+}
+header > nav > :nth-child(2) {
+  animation: showNavigation 0.6s linear forwards 1.3s;
+}
+header > nav > :nth-child(3) {
+  animation: showNavigation 0.6s linear forwards 1.4s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-200px) scaleY(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(-17px) scaleY(0.9);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-22px) scaleY(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dropReverse {
+  0% {
+    transform: translateY(200px) scaleY(0.9);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+  65% {
+    transform: translateY(17px) scaleY(0.9);
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(-2px) scaleY(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes showParagraph {
+  0% {
+    transform: scaleY(0);
+  }
+  33% {
+    transform: scaleY(5);
+  }
+  66% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes showNavigation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollBounce {
+  0%,
+  100% {
+    -webkit-animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    transform: translateY(-25%);
+  }
+  50% {
+    -webkit-animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transform: none;
+  }
+}
+
+@keyframes showElement {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+header > section {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  margin: auto;
+}
+
+header > section > :nth-child(n) {
+  margin: 0.8rem;
+}
+
+header > section > p:first-child {
+  font-size: 1.8rem;
+  transform: scaleY(0);
+  animation: showParagraph 0.4s linear forwards 1s;
+}
+
+header > section > h1 {
+  font-size: 10rem;
+  font-weight: bold;
+  font-family: var(--font-empathized);
+  display: flex;
+}
+
+header > section > h1 > p:nth-child(n) {
+  transition: color 0.2s;
+  opacity: 0;
+}
+
+header > section > h1 > p:nth-child(n):hover {
+  color: var(--clr-object-fill);
+  cursor: default;
+}
+
+header > section > p:nth-child(3) {
+  font-size: 2rem;
+  opacity: 0;
+  animation: dropReverse 0.4s linear forwards 0.6s;
+}
+
+header > section > button {
+  opacity: 0;
+  width: 100px;
+  height: 140px;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-self: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--clr-text-main);
+  font-family: var(--font-main);
+  -webkit-animation: scrollBounce 1s infinite, showElement 1s;
+  animation: scrollBounce 1s infinite, showElement 0.6s 1 1.8s forwards;
+}
+
+header > section > button:hover {
+  cursor: pointer;
+  filter: invert(29%) sepia(88%) saturate(3326%) hue-rotate(219deg)
+    brightness(91%) contrast(93%);
+}
+
+header > section > button > img {
+  width: 45px;
+  height: 45px;
+  filter: invert(100%);
+}
+
+@media (max-width: 600px) {
+  header > section > p:first-child {
+    font-size: 4vw;
+  }
+
+  header > section > h1 {
+    font-size: 12vw;
+  }
+
+  header > section > p:nth-child(3) {
+    font-size: 4vw;
+  }
+
+  header > nav {
+    height: 10vh;
+  }
+
+  header > section {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-top: 20vh;
+  }
+
+  header > section > :nth-child(n) {
+    margin: 0.2rem;
+  }
+
+  header > section > button {
+    display: none;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1200px) {
+  header > section > p:first-child {
+    font-size: 3vw;
+  }
+
+  header > section > h1 {
+    font-size: 12vw;
+  }
+
+  header > section > p:nth-child(3) {
+    font-size: 3vw;
+  }
+
+  header > nav {
+    height: 10vh;
+  }
+
+  header > section {
+    justify-content: flex-start;
+    margin-bottom: 0;
+    margin-top: 20vh;
+  }
+
+  header > section > :nth-child(n) {
+    margin: 0.2rem;
+  }
+}
+
+.m {
+  animation: drop 0.4s linear forwards;
+}
+
+.a {
+  animation: drop 0.4s linear forwards 0.05s;
+}
+
+.r {
+  animation: drop 0.4s linear forwards 0.1s;
+}
+
+.c {
+  animation: drop 0.4s linear forwards 0.15s;
+}
+
+.i {
+  animation: drop 0.4s linear forwards 0.2s;
+}
+
+.n {
+  animation: drop 0.4s linear forwards 0.25s;
+}
+
+.b {
+  animation: drop 0.4s linear forwards 0.3s;
+}
+
+.u {
+  animation: drop 0.4s linear forwards 0.35s;
+}
+
+.r2 {
+  animation: drop 0.4s linear forwards 0.4s;
+}
+
+.e {
+  animation: drop 0.4s linear forwards 0.45s;
+}
+
+.t {
+  animation: drop 0.4s linear forwards 0.5s;
+}
+
+.a2 {
+  animation: drop 0.4s linear forwards 0.55s;
+}

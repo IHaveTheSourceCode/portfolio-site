@@ -293,6 +293,7 @@ header > section > button {
 .about-me {
   background-color: var(--clr-background-light);
   width: 100%;
+  height: 45vh;
 }
 
 .about-me-wrapper {
@@ -300,7 +301,6 @@ header > section > button {
   display: flex;
   gap: 0.2rem;
   align-items: center;
-  padding: 5rem;
   max-width: 800px;
   margin-left: -2.8rem;
 }
@@ -308,17 +308,17 @@ header > section > button {
 .about-me-wrapper > h2 {
   transform: rotate(-90deg);
   color: var(--clr-object-fill);
-  font-size: 2.8rem;
+  font-size: 4.8rem;
   border-bottom: 3px solid var(--clr-object-fill);
   padding-right: 4rem;
   padding-top: 3rem;
-  line-height: 3rem;
+  line-height: 4.5rem;
 }
 
 .about-me-text {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   position: relative;
-  line-height: 1.8rem;
+  line-height: 2.2rem;
 }
 
 .name-wrapper {
@@ -347,24 +347,27 @@ header > section > button {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 12rem;
+  border: 10px solid var(--clr-object-fill);
+  padding-right: 4rem;
 }
 
 .skills-box {
   font-size: 3rem;
   font-weight: bold;
-  transform: rotate(-90deg);
+  transform: translateX(-3.2rem) rotate(-90deg);
   background-color: var(--clr-object-fill);
   padding: 1rem;
   color: var(--clr-background-dark);
 }
 
 .skills-description {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: var(--clr-text-sub);
 }
 
 .skills-display {
-  margin-top: 10rem;
+  margin-top: 8rem;
   display: flex;
   width: 80%;
   justify-content: center;
@@ -390,6 +393,7 @@ header > section > button {
 }
 
 .skills-icons {
+  margin-left: 100px;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -400,6 +404,7 @@ header > section > button {
 }
 
 .icon-cell {
+  width: 100px;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
@@ -432,7 +437,8 @@ header > section > button {
 
 .projects-header {
   font-size: 4rem;
-  width: 80%;
+  width: 80vw;
+  max-width: 1400px;
   line-height: 4.4rem;
   font-family: var(--font-empathized);
   color: var(--clr-object-fill);
@@ -470,6 +476,140 @@ header > section > button {
   background-color: var(--clr-background-dark);
   width: 100%;
   margin-top: 2rem;
+}
+
+footer {
+  width: 100vw;
+  height: 90vh;
+  background-color: var(--clr-background-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.form-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-header > h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: var(--font-empathized);
+  color: var(--clr-object-fill);
+  opacity: 0.9;
+}
+
+.form-header > p {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 800px;
+}
+
+label {
+  color: var(--clr-text-sub);
+  font-family: var(--font-empathized);
+  margin-top: 15px;
+  margin-bottom: 4px;
+}
+
+.contact-input {
+  border-radius: 10px;
+  padding-left: 10px;
+  font-size: 1.3rem;
+  color: var(--font-main);
+  background-color: var(--clr-background-light);
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.contact-input:hover {
+  border-bottom: 3px solid rgba(128, 128, 128, 0.4);
+  margin-bottom: -3px;
+}
+
+.contact-input:focus {
+  outline: none;
+  border-bottom: 3px solid gray;
+  margin-bottom: -3px;
+}
+
+.message {
+  resize: none;
+}
+
+.message:hover {
+  border: 2px solid rgba(128, 128, 128, 0.6);
+  margin: -2px;
+}
+
+.message:focus {
+  border: 2px solid gray;
+  margin: -2px;
+}
+
+.send-form-btn {
+  width: 160px;
+  height: 50px;
+  border: none;
+  background-color: var(--clr-object-fill);
+  font-weight: bold;
+  color: var(--font-main);
+  font-size: 1.2rem;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+
+.send-form-btn:active,
+.send-form-btn:hover {
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.miscs {
+  background-color: var(--clr-background-dark);
+  width: 100vw;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.miscs > div {
+  height: 200px;
+  width: 200px;
+  border: 5px solid var(--clr-background-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.miscs > div:nth-child(n + 2) {
+  border-left: none;
+}
+
+.miscs__img {
+  width: 120px;
+  transition: transform 0.4s;
+}
+
+.miscs__img:hover {
+  transform: scale(0.9);
+}
+
+.miscs__text {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 600px) {

@@ -75,29 +75,36 @@
             <div class="skills-icons">
               <div class="icon-cell">
                 <img
-                  src="public/icons/languages/html5.png"
+                  src="../icons/languages/html5.png"
+                  alt="html 5 icon."
                   class="html5-icon"
                 />
                 <p>HTML5</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/languages/css3.png" />
+                <img src="../icons/languages/css3.png" alt="css 3 icon." />
                 <p>CSS3</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/languages/javascript.png" />
+                <img
+                  src="../icons/languages/javascript.png"
+                  alt="javascript icon."
+                />
                 <p>JavaScript</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/languages/typescript.png" />
+                <img
+                  src="../icons/languages/typescript.png"
+                  alt="typescript icon."
+                />
                 <p>TypeScript</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/languages/react.png" />
+                <img src="../icons/languages/react.png" alt="react icon." />
                 <p>React</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/languages/sass.png" />
+                <img src="../icons/languages/sass.png" alt="sass icon." />
                 <p>Sass</p>
               </div>
             </div>
@@ -106,19 +113,19 @@
             <p>Development Tools</p>
             <div class="skills-icons">
               <div class="icon-cell">
-                <img src="public/icons/tools/git.png" />
+                <img src="../icons/tools/git.png" alt="git icon." />
                 <p>git</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/tools/npm.png" />
+                <img src="../icons/tools/npm.png" alt="npm icon." />
                 <p>npm</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/tools/vitejs.svg" />
+                <img src="../icons/tools/vitejs.svg" alt="vite js icon." />
                 <p>Vite</p>
               </div>
               <div class="icon-cell">
-                <img src="public/icons/tools/figma.png" />
+                <img src="../icons/tools/figma.png" alt="figma icon." />
                 <p>Figma</p>
               </div>
             </div>
@@ -168,6 +175,69 @@
         <div class="project-show-wrapper"></div>
       </div>
     </section>
-    <footer></footer>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="form-header">
+          <h3>READY TO TALK?</h3>
+          <p>Let's chat</p>
+        </div>
+        <form class="contact-form" id="user-form">
+          <label for="name">*Name:</label>
+          <input type="text" id="name" class="contact-input" />
+
+          <label for="email">*Email:</label>
+          <input type="email" id="email" class="contact-input" />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="contact-input" />
+
+          <label for="message">*Message</label>
+          <textarea
+            id="message"
+            class="contact-input message"
+            rows="12"
+          ></textarea>
+          <button class="send-form-btn">Send</button>
+        </form>
+      </div>
+    </footer>
+    <section class="miscs">
+      <div class="return-home">
+        <p class="miscs__text">Return Home</p>
+        <a href="#">
+          <img
+            class="miscs__img"
+            alt="return home."
+            src="../icons/miscs/home.png"
+        /></a>
+      </div>
+      <div class="github">
+        <p class="miscs__text">Visit my GitHub</p>
+        <a href="#">
+          <img
+            class="miscs__img"
+            alt="github link."
+            src="../icons/miscs/github.png"
+        /></a>
+      </div>
+      <div class="cv">
+        <p class="miscs__text">Download my CV</p>
+        <a href="#">
+          <img
+            class="miscs__img"
+            alt="download cv."
+            src="../icons/miscs/pdf.png"
+        /></a>
+      </div>
+      <div class="mail">
+        <p class="miscs__text">Take my mail</p>
+        <a href="#">
+          <img
+            class="miscs__img"
+            alt="open mail."
+            src="../icons/miscs/mail.png"
+        /></a>
+      </div>
+    </section>
   </body>
 </html>

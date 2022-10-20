@@ -12,7 +12,7 @@ const observer = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.1,
   }
 );
 
@@ -37,7 +37,7 @@ const descObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.5,
+    threshold: 0.1,
   }
 );
 for (let i = 0; i < desc.length; i++) {

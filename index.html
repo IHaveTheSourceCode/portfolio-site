@@ -16,11 +16,11 @@
     <title>Portfolio</title>
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav>
-        <a href="#">About</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+        <a href="#about-me">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
       </nav>
       <section>
         <p>Hi! I'm</p>
@@ -44,14 +44,16 @@
           </div>
         </h1>
         <p>Front End Developer.</p>
+
         <button>
+          <a href="#about-me" id="scroll"></a>
           <p>Scroll</p>
           <img src="double-arrow-down.svg" alt="scroll down." />
         </button>
       </section>
     </header>
     <main>
-      <section class="about-me">
+      <section class="about-me" id="about-me">
         <div class="about-me-wrapper animation-small-fade-from-left">
           <h2>About Me</h2>
           <p class="about-me-text">
@@ -137,7 +139,7 @@
         </div>
       </section>
     </main>
-    <section class="featured-projects">
+    <section class="featured-projects" id="projects">
       <div class="projects-header">
         <p>Featured</p>
         <p>Projects</p>
@@ -248,7 +250,7 @@
         </div>
       </div>
     </section>
-    <footer>
+    <footer id="contact">
       <div class="footer-wrapper animation-fade-from-bottom">
         <div class="form-header">
           <h3>READY TO TALK?</h3>
@@ -263,7 +265,7 @@
           <input
             type="hidden"
             name="_next"
-            value="https://portfolio-site-eta-beige.vercel.app/thanks.html"
+            value="https://thank-you-site.vercel.app/"
           />
           <label for="name">*Name:</label>
           <input
@@ -298,7 +300,7 @@
     <section class="miscs">
       <div class="return-home">
         <p class="miscs__text">Return Home</p>
-        <a href="#">
+        <a href="#home">
           <img
             class="miscs__img"
             alt="return home."

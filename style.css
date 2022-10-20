@@ -656,6 +656,15 @@ label {
   margin-right: 3rem;
 }
 
+#scroll {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 20%;
+  background-color: transparent;
+  z-index: 1;
+}
+
 @media (max-width: 600px) {
   header > section > p:first-child {
     font-size: 6vw;
@@ -869,6 +878,11 @@ label {
   .skills-row:last-child {
     border-left: none;
     margin: 0;
+  }
+
+  #scroll {
+    height: 60%;
+    top: 50%;
   }
 }
 
@@ -1110,6 +1124,12 @@ label {
 
   .featured-projects {
     height: fit-content;
+  }
+
+  #scroll {
+    width: 80%;
+    height: 70%;
+    top: 40%;
   }
 }
 

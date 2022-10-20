@@ -48,7 +48,7 @@
     </header>
     <main>
       <section class="about-me">
-        <div class="about-me-wrapper">
+        <div class="about-me-wrapper animation-small-fade-from-left">
           <h2>About Me</h2>
           <p class="about-me-text">
             I'm a Front End Developer based in Warsaw, Poland. I love the
@@ -60,7 +60,7 @@
         </div>
       </section>
       <section class="skills">
-        <div class="skills-header">
+        <div class="skills-header animation-small-fade-from-right">
           <div class="skills-box">SKILLS</div>
           <div class="skills-description">
             Experienced in building modern web applications and reusable
@@ -69,7 +69,7 @@
             backend functionality to future applications.
           </div>
         </div>
-        <div class="skills-display">
+        <div class="skills-display animation-small-fade-from-left">
           <div class="skills-row">
             <p>Languages and Frameworks</p>
             <div class="skills-icons">
@@ -138,13 +138,28 @@
         <p>Featured</p>
         <p>Projects</p>
       </div>
-      <div class="project-wrapper">
+      <div class="project-wrapper animation-fade-from-right">
         <div class="project-description">
           <div class="project-name">Halloween Candy Catcher</div>
           <div class="project-about">
-            The game is about catching halloween candies. Project was made with
-            the help of matter.js physics engine, which controls gravity and
-            collision events of falling objects.
+            Project was made with the help of matter.js physics engine, which
+            controls gravity and handles collision events of falling objects.
+          </div>
+          <div class="project-links">
+            <a
+              target="_blank"
+              href="https://github.com/IHaveTheSourceCode/candy-catcher-game"
+              class="github-link"
+              >GitHub link <img src="./link-icon.png" class="link-icon" alt=""
+            /></a>
+            <a
+              target="_blank"
+              href="https://candy-catcher-game.vercel.app/"
+              class="live-site-link"
+            >
+              Live site link
+              <img src="./link-icon.png" class="link-icon" alt="" />
+            </a>
           </div>
         </div>
         <div class="project-show-wrapper">
@@ -155,7 +170,7 @@
           />
         </div>
       </div>
-      <div class="project-wrapper">
+      <div class="project-wrapper animation-fade-from-left">
         <div class="project-show-wrapper project-desktop">
           <img
             src="./to-do-list-screen.png"
@@ -170,6 +185,22 @@
             Content is live-rendering from the data, which is saved on user
             inputs.
           </div>
+          <div class="project-links">
+            <a
+              target="_blank"
+              href="https://github.com/IHaveTheSourceCode/to-do-list"
+              class="github-link"
+              >GitHub link <img src="./link-icon.png" class="link-icon" alt=""
+            /></a>
+            <a
+              target="_blank"
+              href="https://to-do-list-beta-blush.vercel.app/"
+              class="live-site-link"
+            >
+              Live site link
+              <img src="./link-icon.png" class="link-icon" alt="" />
+            </a>
+          </div>
         </div>
         <div class="project-show-wrapper project-mobile">
           <img
@@ -179,13 +210,29 @@
           />
         </div>
       </div>
-      <div class="project-wrapper">
+      <div class="project-wrapper animation-fade-from-right">
         <div class="project-description">
           <div class="project-name">Comic searcher</div>
           <div class="project-about">
             Comic searcher app is using Marvel API to get data about comics from
             their series. Asynchrous Javascript has been used to fetch data on
             user's request.
+          </div>
+          <div class="project-links">
+            <a
+              target="_blank"
+              href="https://github.com/IHaveTheSourceCode/comics-searcher"
+              class="github-link"
+              >GitHub link <img src="./link-icon.png" class="link-icon" alt=""
+            /></a>
+            <a
+              target="_blank"
+              href="https://ihavethesourcecode.github.io/comics-searcher/"
+              class="live-site-link"
+            >
+              Live site link
+              <img src="./link-icon.png" class="link-icon" alt="" />
+            </a>
           </div>
         </div>
         <div class="project-show-wrapper">
@@ -198,7 +245,7 @@
       </div>
     </section>
     <footer>
-      <div class="footer-wrapper">
+      <div class="footer-wrapper animation-fade-from-bottom">
         <div class="form-header">
           <h3>READY TO TALK?</h3>
           <p>Let's chat</p>
@@ -207,7 +254,7 @@
           <label for="name">*Name:</label>
           <input type="text" id="name" class="contact-input" />
 
-          <label for="email">*Email:</label>
+          <label for="email">Email:</label>
           <input type="email" id="email" class="contact-input" />
 
           <label for="subject">Subject</label>
@@ -219,7 +266,7 @@
             class="contact-input message"
             rows="12"
           ></textarea>
-          <button class="send-form-btn">Send</button>
+          <button class="send-form-btn" type="button">Send</button>
         </form>
       </div>
     </footer>
@@ -235,7 +282,7 @@
       </div>
       <div class="github">
         <p class="miscs__text">Visit my GitHub</p>
-        <a href="#">
+        <a href="https://github.com/IHaveTheSourceCode" target="_blank">
           <img
             class="miscs__img"
             alt="github link."
@@ -253,7 +300,7 @@
       </div>
       <div class="mail">
         <p class="miscs__text">Take my mail</p>
-        <a href="#">
+        <a href="mailto:buretamarcin@gmail.com">
           <img
             class="miscs__img"
             alt="open mail."

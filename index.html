@@ -8,6 +8,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"
+      defer
+    ></script>
     <script type="module" src="/main.js" defer></script>
     <title>Portfolio</title>
   </head>
@@ -250,23 +254,44 @@
           <h3>READY TO TALK?</h3>
           <p>Let's chat</p>
         </div>
-        <form class="contact-form" id="user-form">
+        <form
+          action="https://formsubmit.co/buretamarcin@gmail.com"
+          method="POST"
+          class="contact-form"
+          id="user-form"
+        >
+          <input
+            type="hidden"
+            name="_next"
+            value="https://thank-you-site.vercel.app/"
+          />
           <label for="name">*Name:</label>
-          <input type="text" id="name" class="contact-input" />
-
+          <input
+            type="text"
+            id="name"
+            name="name"
+            class="contact-input req"
+            required
+          />
           <label for="email">Email:</label>
-          <input type="email" id="email" class="contact-input" />
-
+          <input type="email" id="email" name="email" class="contact-input" />
+          <input type="hidden" name="_captcha" value="false" />
           <label for="subject">Subject</label>
-          <input type="text" id="subject" class="contact-input" />
-
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            class="contact-input"
+          />
           <label for="message">*Message</label>
           <textarea
             id="message"
-            class="contact-input message"
+            class="contact-input message req"
             rows="12"
+            name="message"
+            required
           ></textarea>
-          <button class="send-form-btn" type="button">Send</button>
+          <button class="send-form-btn">Send</button>
         </form>
       </div>
     </footer>

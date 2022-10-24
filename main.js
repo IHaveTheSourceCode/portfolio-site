@@ -15,7 +15,7 @@ const descObserver = new IntersectionObserver(
     });
   },
   {
-    threshold: 0.1,
+    threshold: 0.01,
   }
 );
 for (let i = 0; i < desc.length; i++) {

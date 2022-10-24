@@ -14,11 +14,18 @@
   --font-empathized: "Clash Display", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   color: var(--clr-text-main);
   font-family: var(--font-main);
-  overflow-x: hidden;
   min-height: fit-content;
+  max-width: 100%;
+  background-color: red;
+  position: relative;
 }
 
 header {

@@ -24,7 +24,6 @@ body {
   font-family: var(--font-main);
   min-height: fit-content;
   max-width: 100%;
-  background-color: red;
   position: relative;
 }
 
@@ -893,7 +892,7 @@ label {
   }
 
   .form-header > p {
-    font-size: 4.4rem;
+    font-size: 4rem;
   }
 }
 
